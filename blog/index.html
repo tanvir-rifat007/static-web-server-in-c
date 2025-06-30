@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Debug Your Go Program?</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #00d8ff;
+    }
+
+    pre {
+      border-radius: 8px;
+      overflow: auto;
+    }
+
+    a {
+      color: #00bfff;
+    }
+
+    nav {
+        background-color: #34495e;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 15px;
+    }
+    nav ul li a {
+        color: #ecf0f1;
+    }
+    nav ul li a:hover {
+        color: #bdc3c7;
+    }
+
+  </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </nav>
+  <h1>🔍 How to Debug Your Go Program?</h1>
+  
+    <img src = "../debug.png" alt = "Rifat's Image" />
+
+  <p>
+    When working with Go, it's common to need deeper insights into your code’s behavior. Here are a few simple ways to debug a Go program effectively:
+  </p>
+
+  <h2>1. Using <code>fmt.Println</code> (Basic Way)</h2>
+  <pre><code class="language-go">
+package main
+
+import "fmt"
+
+func main() {
+    value := 42
+    fmt.Println("Debug: value is", value)
+}
+  </code></pre>
+
+  <h2>2. Using Delve (Advanced Way)</h2>
+  <p>Install Delve, a debugger for Go:</p>
+  <pre><code class="language-bash">
+go install github.com/go-delve/delve/cmd/dlv@latest
+  </code></pre>
+
+  <p>Then run your Go program under the debugger:</p>
+  <pre><code class="language-bash">
+dlv debug
+  </code></pre>
+
+  <p>Inside Delve, you can set breakpoints, step through code, and inspect variables.</p>
+
+  <h2>More Tools</h2>
+  <ul>
+    <li>VSCode with Go extension</li>
+    <li>GoLand IDE (JetBrains)</li>
+  </ul>
+
+ <p>Happy debugging! 🐞</p>
+
+
+   
+
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
+
